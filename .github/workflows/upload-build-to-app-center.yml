@@ -18,13 +18,13 @@ jobs:
       with:
         java-version: "18"
     - name: build release
-      run: ./gradlew assembleRelease
+      run: ./gradlew assembleDebug
     - name: upload artefact to App Center
       uses: wzieba/AppCenter-Github-Action@v1
       with:
         appName: tenshiAMD/AndroidJetpackComposeDemo
         token: ${{secrets.APP_CENTER_TOKEN}}
         group: Testers-Alpha
-        file: app/build/outputs/apk/release/app-release-unsigned.apk
+        file: app/build/outputs/apk/debug/app-debug.apk
         notifyTesters: true
-        debug: false
+        debug: true
