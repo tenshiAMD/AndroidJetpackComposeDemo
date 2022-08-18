@@ -26,5 +26,6 @@ jobs:
         token: ${{secrets.APP_CENTER_TOKEN}}
         group: ${{secrets.APP_CENTER_GROUPS}}
         file: app/build/outputs/apk/debug/app-debug.apk
+        gitReleaseNotes: true
         notifyTesters: true
         debug: true
