@@ -33,4 +33,7 @@ jobs:
         notifyTesters: true
         debug: true
         releaseNotes: |+
-          ${{ steps.get-latest-commit-message.outputs.LATEST_COMMIT_MESSAGE }}
+          Initiated by **${{github.actor}}** --- **Github Actions**
+          - ${{github.workflow}}
+          - ${{github.ref}}
+          - Build (${{github.run_number}})
