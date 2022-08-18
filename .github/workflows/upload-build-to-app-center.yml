@@ -32,4 +32,5 @@ jobs:
         file: app/build/outputs/apk/debug/app-debug.apk
         notifyTesters: true
         debug: true
-        releaseNotes: "${{ steps.get-latest-commit-message.outputs.LATEST_COMMIT_MESSAGE }}"
+        releaseNotes: |+
+          ${{ steps.get-latest-commit-message.outputs.LATEST_COMMIT_MESSAGE }}
