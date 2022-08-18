@@ -22,7 +22,7 @@ jobs:
     - name: upload artefact to App Center
       uses: wzieba/AppCenter-Github-Action@v1
       with:
-        appName: tenshAMD/AndroidJetpackComposeDemo
+        appName: tenshiAMD/AndroidJetpackComposeDemo
         token: ${{secrets.APP_CENTER_TOKEN}}
         group: Testers-Alpha
         file: app/build/outputs/apk/release/app-release-unsigned.apk
